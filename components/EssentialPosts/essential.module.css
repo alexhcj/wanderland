@@ -1,0 +1,212 @@
+.posts {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: url('../../../travel-blog/public/images/essentials-bg.jpg') no-repeat center top;
+}
+
+.header {
+    text-align: center;
+}
+
+.section {
+    display: block;
+    margin-bottom: 3px;
+    line-height: 1.2em;
+    font-size: 21px;
+    font-family: 'Crimson Text',serif;
+    font-style: italic;
+    color: #878787;
+    font-weight: 400;
+}
+
+.sectionTitle {
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    line-height: 1.12em;
+    font-size: 50px;
+    letter-spacing: -.02em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    color: #1e1e1e
+}
+
+.tagBg {
+    position: relative;
+    padding: 0 15px;
+}
+
+.tagBg svg,
+.tagBg span {
+    top: 3px;
+    height: 90%;
+}
+
+.tagText {
+    color: var(--color-khaki);
+    opacity: .99;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 55px;
+}
+
+.items > .item:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+.item {
+    display: flex;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+}
+
+.tag {
+    position: absolute;
+    content: '';
+    top: 20px;
+    left: -10px;
+    height: 28px;
+}
+
+.link {
+    display: flex;
+    padding: 5px 30px 5px 25px;
+    width: 100%;
+    height: 100%;
+}
+
+.link:hover .linkInner {
+    color: var(--color-khaki);
+}
+
+.link span:last-child svg {
+    transition: var(--transition--tag-svg-fill);
+}
+
+.link:hover span:last-child svg {
+    fill: var(--color-khaki);
+}
+
+.linkInner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-family: 'Crimson Text',serif;
+    font-style: italic;
+    opacity: .99;
+    color: var(--color-tag-link);
+    transition: var(--transition--tag-color);
+}
+
+.img {
+    position: relative;
+    width: 49%;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 5.7%;
+    padding-right: 12%;
+    width: 51%;
+}
+
+.meta {
+    display: flex;
+    margin-bottom: 6px;
+}
+
+.meta .metaLink:first-child {
+    margin-right: 20px;
+}
+
+.metaLink {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    font-size: 18px;
+    font-family: 'Crimson Text',serif;
+    font-style: italic;
+    color: var(--color-tag-link);
+}
+
+.metaLink:hover {
+    color: var(--color-khaki);
+}
+
+.metaLink svg {
+    margin-right: 2px;
+    margin-bottom: 3px;
+    transition: var(--transition--tag-svg-fill);
+}
+
+.metaLink:hover svg {
+    fill: var(--color-khaki);
+}
+
+.date::after,
+.author::after {
+    position: absolute;
+    content: '';
+    bottom: 1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-khaki);
+    transform: scaleX(0);
+    transform-origin: 100% 0;
+    transition: var(--transition--article-meta);
+}
+
+.metaLink:hover .date::after,
+.metaLink:hover .author::after {
+    transform: scaleX(1);
+    transform-origin: 0 0;
+}
+
+.title {
+    margin-bottom: 9px;
+    line-height: 1.2em;
+    font-size: 29px;
+    letter-spacing: -.02em;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+
+}
+
+.title a {
+    width: auto;
+    background-image: linear-gradient(#0000 calc(100% - 2px), var(--color-dark) 2px);
+    background-repeat: no-repeat;
+    transition: .6s cubic-bezier(.215,.61,.355,1);
+    background-size: 0 96%;
+}
+
+.title a:hover {
+    background-size: 100% 96%;
+    color: var(--color-dark);
+}
+
+.text {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 16px;
+    line-height: 26px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+/* TODO: add support or make whole trancate paragraph text */
+/* --max-lines: 3; */
+/* max-height: calc(var(--lh) * var(--max-lines)); */

@@ -1,0 +1,17 @@
+.clients {
+    width: 100%;
+}
+
+.items {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.item {
+    transition: var(--transition--clients-img);
+}
+
+.item:hover {
+    transition: var(--transition--clients-img);
+    opacity: .3;
+}

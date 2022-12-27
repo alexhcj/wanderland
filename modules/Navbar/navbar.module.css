@@ -1,0 +1,230 @@
+.nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 0 60px;
+    z-index: 10;
+}
+
+.navTop {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* navTop left side */
+.contacts {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.phone,
+.email {
+    display: flex;
+    font-size: 1.125rem;
+    font-style: italic;
+    font-weight: 400;
+    font-family: 'Crimson Text', serif;
+}
+
+.phone {
+    margin-right: 25px;
+}
+
+.circle {
+    display: flex;
+    margin-right: 10px;
+    width: 12px;
+    height: 12px;
+    background-color: blueviolet;
+    border-radius: 50%;
+}
+
+.phoneLink,
+.emailLink {
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    transition: var(--transition--nav-hover);
+}
+
+.phoneLink:hover,
+.emailLink:hover {
+    color: var(--color-hover);
+}
+
+.phoneLink > svg,
+.emailLink > svg {
+    margin-right: 10px;
+}
+
+.phoneLink > svg {
+    margin-top: -5px;
+}
+
+.phoneLink > svg,
+.emailLink > svg {
+    transition: var(--transition--nav-hover);
+}
+
+.phoneLink:hover > svg,
+.emailLink:hover > svg {
+    fill: var(--color-hover)!important;
+}
+
+/* navTop right side */
+.socials {
+    display: flex;
+    align-items: center;
+}
+
+.socialsTitle {
+    margin-right: 12px;
+    font-size: 1.125rem;
+    font-style: italic;
+    font-weight: 400;
+    font-family: 'Crimson Text', serif;
+    color: var(--color-white);
+}
+
+.socialItem:not(:last-child) {
+    margin-right: 7px;
+}
+
+.socialLink > svg {
+    transition: var(--transition--nav-hover);
+}
+
+.socialLink:hover > svg {
+    fill: var(--color-hover)!important;
+}
+
+.navBottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    align-items: center;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.left,
+.center,
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.linksLeft,
+.linksRight {
+    display: flex;
+}
+
+.linksLeft > li:not(:last-child),
+.linksRight > li:not(:last-child) {
+    margin-right: 20px;
+}
+
+.linkItem {
+    position: relative;
+    line-height: 28px;
+}
+
+.linkItemInner {
+    position: relative;
+}
+
+.linkItem:hover .linkItemBg {
+    opacity: 1;
+    z-index: 0;
+}
+
+.linkItemBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .3s ease-out;
+}
+
+.linkBgLeft,
+.linkBgRight {
+    position: absolute;
+    top: 1px;
+    height: 96%;
+}
+.linkBgLeft polygon,
+.linkBgRight polygon {
+    fill: var(--color-white);
+    stroke: var(--color-white);
+}
+
+.linkBgLeft {
+    left: -4px;
+}
+
+.linkBgRight {
+    right: -4px;
+}
+
+.linkBgCenter {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    right: 0;
+    margin: auto;
+    width: calc(100% - 12px);
+    height: 96%;
+    background-color: var(--color-white);
+}
+
+.navLink {
+    padding: 0 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+    color: var(--color-white);
+    transition: var(--transition--nav-hover);
+    opacity: .99;
+}
+
+.navLink:hover {
+    color: var(--color-hover);
+}
+
+.navLink > svg,
+.navLink > svg {
+    transition: var(--transition--nav-hover);
+}
+
+.navLink:hover > svg,
+.navLink:hover > svg {
+    fill: var(--color-hover)!important;
+}
+
+.navLinkBasic {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.navLinkBasic > svg {
+    margin-right: 12px;
+}
+
+.right .navLinkBasic > svg {
+    margin-right: 0;
+    margin-left: 12px;
+}
+
+.navLinkPrimary:hover {
+    color: var(--color-khaki);
+}
+
+.logo {
+    margin: 0 85px;
+}

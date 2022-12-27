@@ -1,0 +1,9 @@
+.divider {
+    max-width: 100%;
+    width: 100%;
+}
+
+.divider > div {
+    margin-top: -7%!important;
+    /* transform: translateY(-130px); */
+}

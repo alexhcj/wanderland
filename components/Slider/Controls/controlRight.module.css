@@ -1,0 +1,34 @@
+.control {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 47px;
+    transform: matrix(1, 0, 0, 1, -95, -20);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.control svg:first-child {
+    transition: var(--transition--slider-control);
+}
+
+.control svg:last-child {
+    position: absolute;
+    content: '';
+    display: block;
+    transition: var(--transition--slider-control);
+}
+
+.control:hover svg:first-child {
+    fill: var(--color-khaki);
+}
+
+.control:hover svg:last-child {
+    fill: var(--color-white);
+}
